@@ -1,6 +1,6 @@
 import time
 import tkinter as tk
-from PIL import ImageTk, Image
+
 
 #simulation variables and starting conditions
 
@@ -76,14 +76,13 @@ while True:
         vx += a * delta_t    #change in velocity is time times acceleration
         x += vx * delta_t    #change in position is time times speed
         
-    #renders a frame only every {step_pf} times
-    for i in range(step_pf):
         f_spring = -1 * k * y      #Hooke law
         f_friction = friction_k * vy * (1+abs(vy)) #friction
         f_total = f_spring + f_friction
         a = f_total/m             #Newton law
         vy += a * delta_t    #change in velocity is time times acceleration
         y += vy * delta_t    #change in position is time times speed
+
 
     #debug information
     if(debug_active):
