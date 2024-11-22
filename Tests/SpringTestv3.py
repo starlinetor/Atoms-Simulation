@@ -1,6 +1,4 @@
-from ast import main
 from framerate_starlinetor.framerate import frame_handler
-import time
 import tkinter as tk
 
 class spring_simulation:
